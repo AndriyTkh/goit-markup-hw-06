@@ -96,7 +96,9 @@ h3 {
 }
 .page-top-container {
   display: flex;
-  gap: 332px;
+  /* gap: 332px; */
+  align-items: center;
+  justify-content: space-between;
 }
 .contact-info {
   font-style: normal;
@@ -167,7 +169,71 @@ h3 {
   align-items: flex-end;
 }
 
-/* || Title page */
+.top-open-btn {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+/* || Top Modal ++++++++++++++++++++++++++++++++++++++++++*/
+
+.top-mod {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  padding: 16px;
+}
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.top-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #e7e9fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.top-close-btn:hover,
+.top-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
+}
+.top-close-btn:hover > .top-close-icon,
+.top-close-btn:focus > .top-close-icon {
+  fill: #ffffff;
+}
+.top-close-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* || Title page ++++++++++++++++++++++++++++++++++++++++++*/
 
 .efective-solutions-section {
   background-color: #2e2f42;
@@ -519,7 +585,7 @@ h3 {
   fill: #ffffff;
 }
 
-/* Modal */
+/* Modal +++++++++++++++++++++++++++++++++++++++++++*/
 
 .backdrop {
   position: fixed;
@@ -862,6 +928,23 @@ h3 {
   }
   .footer-logo-box {
     margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navigation-list,
+  .contact-info {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
 }
 
