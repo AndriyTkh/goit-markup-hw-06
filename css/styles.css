@@ -544,8 +544,8 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 408px;
-  min-height: 584px;
+  width: 288px;
+  min-height: 623px;
   background-color: #fcfcfc;
   border-radius: 4px;
   padding: 72px 24px 24px 24px;
@@ -772,14 +772,39 @@ h3 {
     width: calc((100% - 24px) / 2);
   }
 
+  .end-section-link {
+    margin: 0 0 16px 0;
+  }
   .end-section .container {
-    display: flex;
-    gap: 120px;
-    align-items: baseline;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    gap: 72px 24px;
+  }
+  .end-icon-list {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    gap: 16px;
   }
   .footer-form {
-    display: flex;
-    gap: 24px;
+    flex-direction: row;
+  }
+  .footer-logo-box,
+  .end-list-box,
+  .subscribe-box {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+  .subscribe-par,
+  .end-section-icon-paragraf {
+    text-align: start;
+  }
+
+  .modal {
+    width: 408px;
+    min-height: 584px;
   }
 }
 
@@ -823,6 +848,20 @@ h3 {
   }
   .portfolio-list-item {
     width: calc((100% - 48px) / 3);
+  }
+
+  .end-section .container {
+    align-items: baseline;
+    gap: 80px;
+    flex-wrap: nowrap;
+  }
+  .footer-logo-box,
+  .end-list-box,
+  .subscribe-box {
+    flex-basis: calc((100% - 40px * 2) / 3);
+  }
+  .footer-logo-box {
+    margin-right: 40px;
   }
 }
 
