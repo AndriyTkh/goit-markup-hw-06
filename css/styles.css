@@ -96,7 +96,6 @@ h3 {
 }
 .page-top-container {
   display: flex;
-  /* gap: 332px; */
   align-items: center;
   justify-content: space-between;
 }
@@ -195,7 +194,7 @@ h3 {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  padding: 16px;
+  padding: 72px 16px 24px;
 }
 .is-open {
   opacity: 1;
@@ -213,7 +212,7 @@ h3 {
   padding: 0;
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #e7e9fc;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -231,6 +230,60 @@ h3 {
 }
 .top-close-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Top mod content */
+
+.top-navigation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 168px;
+}
+.top-navigation-link {
+  padding: 24px 0;
+
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.top-navigation-link:hover,
+.top-navigation-link:focus {
+  color: #404bbf;
+}
+.top-current {
+  color: #404bbf;
+}
+.top-contacts {
+  color: #434455;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.top-contacts:hover,
+.top-contacts:focus {
+  color: #404bbf;
+}
+.top-contact-info {
+  font-style: normal;
+  margin-bottom: 48px;
+}
+.top-contact-list {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+.top-icon-list {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 /* || Title page ++++++++++++++++++++++++++++++++++++++++++*/
@@ -804,6 +857,11 @@ h3 {
   }
 
   .efective-solutions-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/title/people-office-x2.jpg);
     padding: 112px 0;
   }
   .efective-solutions-title {
@@ -871,6 +929,29 @@ h3 {
   .modal {
     width: 408px;
     min-height: 584px;
+  }
+  .top-open-btn {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1158px) {
+  .contact-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .logo {
+    margin-right: 120px;
   }
 }
 
